@@ -10,6 +10,7 @@ else
 #please choose if you want to mine or not uncomment one of the following lines
 cd ~/swissdlt/
 #put your mining node command here
+#eg screen -dSm screen node1 geth --dadatir node1 etc
 ~/swissdlt/start-node.sh
 sleep 3
 #    cho "node1 is NOT running!"
