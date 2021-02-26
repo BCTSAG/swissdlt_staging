@@ -19,14 +19,12 @@ screen -dSm node1 geth --datadir node1/ --syncmode 'full' --gcmode=archive  --po
 #validating node (don't use this option for unlocking !)
 #screen -dSm node1 geth --datadir node1/ --syncmode 'full' --port 30311 --rpc --rpcaddr 'localhost' --rpccorsdomain "*" --rpcport 8540 --rpcapi 'personal,eth,net,web3,txpool,miner' --networkid 99 --gasprice '1' -unlock 'VALIDATING-ADDRESS-withouth-0x' --password passwort.txt --mine --allow-insecure-unlock
 
-
 sleep 3
 #    cho "node1 is NOT running!"
      echo 'dead node1 restarted '$NOW'' >> ~/swissdlt/servercheck.txt;
 fi
-
 ###############
-if you are behind a router and dont have your own IP
+#if you are behind a router and dont have your own IP
 ###############
 if (ps -ef | grep -i ngrok | grep -v grep) ; then
 #    echo 'ngrok is running '$NOW''
@@ -34,9 +32,13 @@ if (ps -ef | grep -i ngrok | grep -v grep) ; then
 #    echo 'Node1 is running '$NOW'' >> ~/swissdlt/servercheck.txt
 sleep 1
 else
-#put your ngrok command here eg 
-#screen -S ngrok ngrok http -region=eu -hostname=nodes-swissldt.eu.ngrok.io 30311
+cd ~/swissdlt/
+#put your ngrok command here eg
+#screen -dSm ngrok ngrok http -region=eu -hostname=nodes-swissldt.eu.ngrok.io 30311
+./start_ngrok.sh
 sleep 3
 #    cho "ngrok is NOT running!"
      echo 'dead ngrok restarted '$NOW'' >> ~/swissdlt/servercheck.txt;
 fi
+
+
