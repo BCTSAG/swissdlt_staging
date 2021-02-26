@@ -24,3 +24,19 @@ sleep 3
 #    cho "node1 is NOT running!"
      echo 'dead node1 restarted '$NOW'' >> ~/swissdlt/servercheck.txt;
 fi
+
+###############
+if you are behind a router and dont have your own IP
+###############
+if (ps -ef | grep -i ngrok | grep -v grep) ; then
+#    echo 'ngrok is running '$NOW''
+#    uncomment the next line for testing purposes
+#    echo 'Node1 is running '$NOW'' >> ~/swissdlt/servercheck.txt
+sleep 1
+else
+#put your ngrok command here eg 
+#screen -S ngrok ngrok http -region=eu -hostname=nodes-swissldt.eu.ngrok.io 30311
+sleep 3
+#    cho "ngrok is NOT running!"
+     echo 'dead ngrok restarted '$NOW'' >> ~/swissdlt/servercheck.txt;
+fi
