@@ -18,6 +18,10 @@ sudo apt-get update
 
 sudo apt-get install ethereum
 
+sudo apt-get update -y
+
+sudo apt-get install -y ngrok-client
+
 git clone https://github.com/BCTSAG/swissdlt_staging
 
 mv swissdlt_staging swissdlt
