@@ -34,8 +34,9 @@ sleep 1
 else
 cd ~/swissdlt/
 #put your ngrok command here eg
-#screen -dSm ngrok ngrok http -region=eu -hostname=nodes-swissldt.eu.ngrok.io 30311
-./start_ngrok.sh
+#screen -dSm ngrok1 bash -c './ngrok tcp -region=eu -hostname=nodes; exec bash'
+#screen -dSm ngrok1 bash -c './ngrok tcp -region=eu -hostname=nodes-swissldt.eu.ngrok.io 22; exec bash'
+#./start_ngrok.sh
 sleep 3
 #    cho "ngrok is NOT running!"
      echo 'dead ngrok restarted '$NOW'' >> ~/swissdlt/servercheck.txt;
