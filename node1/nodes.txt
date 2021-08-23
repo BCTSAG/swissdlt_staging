@@ -2,7 +2,9 @@ SAK1                146.185.7.9.190   30311
 SAK2                146.185.7.9.191
 Linode Operal RPC   139.177.177.91    30311               rpc.operal.club
 Linode HOPR Saentis 172.104.155.145   30311 30312 30313
-Linode core besu    172.105.94.251 30311
+Linode core besu    172.105.94.251    30311
+Linode Bridge       172.104.235.222   30311
+
 Startfeld ngrok ?   3.125.102.39 80 
 AppsWithLove 85.195.233.250 1558 
 192.162.29.33 30312 ?
