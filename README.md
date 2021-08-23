@@ -8,7 +8,9 @@ sudo apt install git
 
 sudo apt-get install screen
 
-sudo apt-get install ntpdate
+sudo apt-get update 
+
+sudo apt install ntpdate
 
 sudo ntpdate -s time.nist.gov
 
